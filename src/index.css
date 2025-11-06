@@ -3,3 +3,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+  --column-header: #f1f5f9;
+  --accent: #3b82f6;
+  --hover: #e0f2fe;
+  --tag-bg: #dbeafe;
+  --accent: #2563eb;           
+  --accent-hover: #1d4ed8;     
+  --accent-text: #ffffff; 
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --card-bg: #1e293b;
+  --column-header: #334155;
+  --accent: #60a5fa;
+  --hover: #1e3a8a;
+  --tag-bg: #1e40af;
+  --accent: #043c81;           /* lighter accent */
+  --accent-hover: #0a2e68;
+  --accent-text: #0f172a;   
+}
+
+[data-theme="light"] {
+  --accent: #031a4d;
+  --accent-hover: #1d4ed8;
+  --accent-text: #da5555;
+}
+
+
+
+/* Beautiful transitions & animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease forwards; }
+.animate-scaleIn { animation: scaleIn 0.25s ease-out forwards; }
